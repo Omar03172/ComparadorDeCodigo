@@ -3,10 +3,11 @@
 ## Instalación y Uso
 
 ```bash
-git https://github.com/Omar03172/ComparadorDeCodigo.git
-cd DetectorDePlagio
+git clone https://github.com/Omar03172/ComparadorDeCodigo.git
+cd ComparadorDeCodigo/DetectorDePlagio
 python3 -m venv .venv
 source .venv/bin/activate
+pip install --upgrade pip
 pip install -r requirements.txt
-.venv/bin/python main.py
+python main.py
 ```
