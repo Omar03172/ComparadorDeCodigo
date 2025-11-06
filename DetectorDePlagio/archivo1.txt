@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+// Operaciones básicas
+int suma(int a, int b)        { return a + b; }       // suma
+int resta(int a, int b)       { return a - b; }       // resta
+int multiplica(int a, int b)  { return a * b; }       // multiplicación
+int max2(int a, int b)        { return (a > b) ? a : b; } // máximo de dos
+int min2(int a, int b)        { return (a < b) ? a : b; } // mínimo de dos
+int absoluto(int a)           { return (a < 0) ? -a : a; } // valor absoluto
+int cuadrado(int a)           { return a * a; }
+int cubo(int a)               { return a * a * a; }
+int es_par(int a)             { return (a % 2 == 0) ? 1 : 0; }
+int clamp01(int x)            { if (x < 0) return 0; if (x > 1) return 1; return x; }
+
+int main() {
+    int a = 6;
+    int b = 4;
+
+    cout << "Suma: "        << suma(a,b)        << endl;
+    cout << "Resta: "       << resta(a,b)       << endl;
+    cout << "Multiplica: "  << multiplica(a,b)  << endl;
+    cout << "Max2: "        << max2(a,b)        << endl;
+    cout << "Min2: "        << min2(a,b)        << endl;
+    cout << "Absoluto(-7): "<< absoluto(-7)     << endl;
+    cout << "Cuadrado(5): " << cuadrado(5)      << endl;
+    cout << "Cubo(3): "     << cubo(3)          << endl;
+    cout << "Es par(10): "  << es_par(10)       << endl;
+    cout << "Clamp01(2): "  << clamp01(2)       << endl;
+    return 0;
+}

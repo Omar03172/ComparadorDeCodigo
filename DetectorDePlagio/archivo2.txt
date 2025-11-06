@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+// Funciones utilitarias numéricas
+int sumar(int x1, int x2)        { return x1 + x2; }    // sumar dos enteros
+int restar(int x1, int x2)       { return x1 - x2; }    // restar
+int producto(int n, int m)       { return n * m; }      // multiplicar
+int maximo(int x, int y)         { return (x > y) ? x : y; } // máximo
+int minimo(int x, int y)         { return (x < y) ? x : y; } // mínimo
+int abs_val(int z)               { return (z < 0) ? -z : z; } // absoluto
+int cuadrado_num(int n)          { return n * n; }      // cuadrado
+int cubo_num(int n)              { return n * n * n; }  // cubo
+int esNumeroPar(int valor)       { return (valor % 2 == 0) ? 1 : 0; } // paridad
+int limitar01(int valor)         { if (valor < 0) return 0; if (valor > 1) return 1; return valor; } // limitar entre 0 y 1
+
+int main() {
+    // Variables de entrada
+    int primero = 6;
+    int segundo = 4;
+
+    // Llamadas a las funciones
+    cout << "Suma: "        << sumar(primero,segundo)        << endl;
+    cout << "Resta: "       << restar(primero,segundo)       << endl;
+    cout << "Multiplica: "  << producto(primero,segundo)     << endl;
+    cout << "Max2: "        << maximo(primero,segundo)       << endl;
+    cout << "Min2: "        << minimo(primero,segundo)       << endl;
+    cout << "Absoluto(-7): "<< abs_val(-7)                   << endl;
+    cout << "Cuadrado(5): " << cuadrado_num(5)               << endl;
+    cout << "Cubo(3): "     << cubo_num(3)                   << endl;
+    cout << "Es par(10): "  << esNumeroPar(10)               << endl;
+    cout << "Clamp01(2): "  << limitar01(2)                  << endl;
+    return 0;
+}
